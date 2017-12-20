@@ -1,3 +1,8 @@
+"""
+Created by Apostolos Delis on 12/18/17.
+Copyright © 2017 Apostolos Delis. All rights reserved.
+"""
+
 import requests
 import errno
 import os
