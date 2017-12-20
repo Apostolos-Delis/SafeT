@@ -7,7 +7,7 @@ The app uses the google maps api: https://developers.google.com/maps/documentati
 
 Users will be able to use google maps like they have always been able to, but additionally, they will be notified about the crime rate within the area they have to travel. This will allow users to make decisions that will not only allow them to travel fast and efficiently to wherever they want to go, but also safely, hence the name SafeT.
 
-#Necessary Pods:
+# Necessary Pods:
 
 Alamofire https://cocoapods.org/?q=alamofire
 
