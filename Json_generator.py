@@ -280,8 +280,8 @@ class CrimeDataGenerator:
 if __name__ == "__main__":
 
     # Define directories
-    base_directory = "/Users/apostolos/Documents/Textpert/tester"
-    json_directory = "/Users/apostolos/Documents/Textpert/tester/json_files"
+    base_directory = "..."
+    json_directory = ".../json_files"
     json_url = "https://data.lacity.org/api/views/y8tr-7khq/rows.json?accessType=DOWNLOAD"
 
     crime_data_generator = CrimeDataGenerator(json_url, json_directory)
