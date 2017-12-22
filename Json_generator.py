@@ -323,6 +323,66 @@ class CrimeDataGenerator:
             if verbose:
                 print("data point ", i, "processed")
 
+    def generate_geojson(self, current_date=datetime.datetime.now(), timeframe="week", mapping=True, verbose=False):
+    """
+    Creates geojson files instead of regular json files (used for the mapbox)
+    :param current_date: The date that you want to base the last
+    :param mapping: if the categories from the json url should be mapped to the simplified list
+    :param timeframe: how far back you want to pull data from
+    potential data time-frames: = {"week", "month", "year"}
+    :param verbose: if the user should be notified at the completion of each data point
+    """
+    time_frames = {"week", "month", "year", "day"}
+    if timeframe not in time_frames:
+        print("incorrect time frame, needs to be one of the following:")
+        print(time_frames)
+        exit(1)
+
+    file = open(os.path.join(self.directory, "geodata_" + timeframe + "_0.geojson"), 'w+')
+
+    self.get_data_from_json()
+    indexes = range(len(self.data_uncleaned))
+
+    num_data_points = 0
+
+    create_new_file = True
+    for i in indexes:
+
+        # In order to avoid having txt files that are too big, create a new file every 20000 data points
+        if num_data_points % 20000 == 0 and create_new_file:
+            file.write("]\n}")
+            file.close()
+            file_name = "geodata_" + timeframe + '_' + str(int(num_data_points / 20000)) + ".geojson"
+            file = open(os.path.join(json_directory, file_name), 'w+')
+            file.write("{\n\"type\": \"FeatureCollection\",\n\"features\": [\n")
+            create_new_file = False
+
+        current_data_point = self.data_uncleaned[i]
+        self.data[i] = current_data_point
+
+        # Store the longitude and latitude and category of each data point
+        if current_data_point[33][1] is not None and current_data_point[33][2] is not None and \
+                CrimeDataGenerator.in_correct_time_frame(datapoint=current_data_point, timeframe=timeframe,
+                                                         current_date=current_date):
+
+            file.write("{\n\"type\": \"Feature\",\n\"geometry\": {\n\"type: \"point\",\n\"coordinates\": [\n")
+            file.write(str(float(current_data_point[33][1])) + ",\n")
+            file.write(str(float(current_data_point[33][2])) + "    \n]\n},\n")
+            file.write("\"properties\": {\nid: " + str(num_data_points))
+            file.write(",\n\"category\": \"")
+            if mapping:  # and self.category_completetion()
+                file.write(CrimeDataGenerator.crime_simplification_map[current_data_point[16]])
+            else:
+                file.write(str(current_data_point[16]))
+            file.write("\",\n\"time\": \"")
+            file.write(CrimeDataGenerator.get_crime_time(current_data_point).__str__())
+            file.write("\"\n}\n},")
+            num_data_points += 1
+            create_new_file = True
+
+            if verbose:
+                print("data point: ", num_data_points, "found at index", i)
+
     @staticmethod
     def get_crime_time(datapoint):
         """
