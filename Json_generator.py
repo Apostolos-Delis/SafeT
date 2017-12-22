@@ -7,6 +7,7 @@ import requests
 import errno
 import os
 import pandas as pd
+import datetime
 
 
 class CrimeDataGenerator:
@@ -265,6 +266,94 @@ class CrimeDataGenerator:
 
         error_file.write("]")
         error_file.close()
+
+    def get_recent_data(self, current_date=datetime.datetime.now(), timeframe="week", mapping=True, verbose=False):
+    """
+    :param current_date: The date that you want to base the last
+    :param mapping: if the categories from the json url should be mapped to the simplified list
+    :param timeframe: how far back you want to pull data from
+          potential data time-frames: = {"week", "month", "year"}
+    :param verbose: if the user should be notified at the completion of each data point
+    :return:
+    """
+
+    time_frames = {"week", "month", "year", "day"}
+    if timeframe not in time_frames:
+        print("incorrect time frame, needs to be one of the following:")
+        print(time_frames)
+        exit(1)
+
+    file = open(os.path.join(self.directory, "recent_data_0.json"), 'w+')
+
+    self.get_data_from_json()
+    indexes = range(len(self.data_uncleaned))
+
+    num_data_points = 0
+
+    for i in indexes:
+
+        # In order to avoid having txt files that are too big, create a new file every 20000 data points
+        if i % 20000 == 0:
+            file.write("}")
+            file.close()
+            file_name = "recent_data_" + str(int(i / 20000)) + ".json"
+            file = open(os.path.join(json_directory, file_name), 'w+')
+            file.write("{\n")
+
+        current_data_point = self.data_uncleaned[i]
+        self.data[i] = current_data_point
+
+        # Store the longitude and latitude and category of each data point
+        if current_data_point[33][1] is not None and current_data_point[33][2] is not None and \
+                CrimeDataGenerator.in_correct_time_frame(datapoint=current_data_point, timeframe=timeframe,
+                                                         current_date=current_date):
+            file.write("\"" + str(num_data_points))
+            file.write("\": [\"")
+            file.write(str(float(current_data_point[33][1])))
+            file.write("\", \"")
+            file.write(str(float(current_data_point[33][2])))
+            file.write("\", \"")
+            if mapping:  # and self.category_completetion()
+                file.write(CrimeDataGenerator.crime_simplification_map[current_data_point[16]])
+            else:
+                file.write(str(current_data_point[16]))
+            file.write("\"],\n")
+            num_data_points += 1
+
+            if verbose:
+                print("data point ", i, "processed")
+
+    @staticmethod
+    def get_crime_time(datapoint):
+        """
+        :param datapoint: datapoint you want the date from
+        :return: returns a list with [year, month, day] of the crime
+        """
+        date = []
+        date.append(datapoint[9].split('-')[0])
+        date.append(datapoint[9].split('-')[1])
+        date.append(datapoint[9].split('-')[2].split('T')[0])
+        return date
+
+    @staticmethod
+    def in_correct_time_frame(datapoint, timeframe, current_date=datetime.datetime.now())->bool:
+        """
+        :param datapoint: datapoint you want to check if in the valid region
+        :param timeframe: whether you want to check if it is same month, day, or year
+        :return:
+        """
+        time = CrimeDataGenerator.get_crime_time(datapoint)
+        if timeframe == "day":
+            return time[0] == current_date.year and time[1] == current_date.month and time[2] == current_date.day
+
+        elif timeframe == "week":
+            return time[0] == current_date.year and time[1] == current_date.month and math.fabs(time[2] - current_date.day) <= 7
+
+        elif timeframe == "month":
+            return time[0] == current_date.year and time[1] == current_date.month
+
+        else:
+            return time[0] == current_date.year
 
     @staticmethod
     def make_directory(file_path):
