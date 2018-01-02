@@ -9,6 +9,28 @@ import os
 import pandas as pd
 import datetime
 
+class TimeString:
+
+    def __init__(self, year, month, day):
+        self.year = int(year)
+        self.month = int(month)
+        self.day = int(day)
+
+    def __repr__(self):
+        return str(self.month) + "/" + str(self.day) + "/" + str(self.year)
+
+    def day(self):
+        return self.day
+
+    def month(self):
+        return self.month
+
+    def year(self):
+        return self.year
+
+    def __str__(self):
+        return str(self.month) + "/" + str(self.day) + "/" + str(self.year)
+
 
 class CrimeDataGenerator:
     """
@@ -324,64 +346,89 @@ class CrimeDataGenerator:
                 print("data point ", i, "processed")
 
     def generate_geojson(self, current_date=datetime.datetime.now(), timeframe="week", mapping=True, verbose=False):
-    """
-    Creates geojson files instead of regular json files (used for the mapbox)
-    :param current_date: The date that you want to base the last
-    :param mapping: if the categories from the json url should be mapped to the simplified list
-    :param timeframe: how far back you want to pull data from
-    potential data time-frames: = {"week", "month", "year"}
-    :param verbose: if the user should be notified at the completion of each data point
-    """
-    time_frames = {"week", "month", "year", "day"}
-    if timeframe not in time_frames:
-        print("incorrect time frame, needs to be one of the following:")
-        print(time_frames)
-        exit(1)
+        """
+        Creates geojson files instead of regular json files (used for the mapbox)
+        :param current_date: The date that you want to base the last
+        :param mapping: if the categories from the json url should be mapped to the simplified list
+        :param timeframe: how far back you want to pull data from
+        potential data time-frames: = {"week", "month", "year"}
+        :param verbose: if the user should be notified at the completion of each data point
+        """
+        time_frames = {"week", "month", "year", "day"}
+        if timeframe not in time_frames:
+            print("incorrect time frame, needs to be one of the following:")
+            print(time_frames)
+            exit(1)
 
-    file = open(os.path.join(self.directory, "geodata_" + timeframe + "_0.geojson"), 'w+')
+        file = open(os.path.join(self.directory, "geodata_" + timeframe + "_0.geojson"), 'w+')
 
-    self.get_data_from_json()
-    indexes = range(len(self.data_uncleaned))
+        self.get_data_from_json()
+        indexes = range(len(self.data_uncleaned))
 
-    num_data_points = 0
+        num_data_points = 0
 
-    create_new_file = True
-    for i in indexes:
+        create_new_file = True
+        for i in indexes:
 
-        # In order to avoid having txt files that are too big, create a new file every 20000 data points
-        if num_data_points % 20000 == 0 and create_new_file:
-            file.write("]\n}")
-            file.close()
-            file_name = "geodata_" + timeframe + '_' + str(int(num_data_points / 20000)) + ".geojson"
-            file = open(os.path.join(json_directory, file_name), 'w+')
-            file.write("{\n\"type\": \"FeatureCollection\",\n\"features\": [\n")
-            create_new_file = False
+            # In order to avoid having txt files that are too big, create a new file every 20000 data points
+            if num_data_points % 20000 == 0 and create_new_file:
 
-        current_data_point = self.data_uncleaned[i]
-        self.data[i] = current_data_point
+                file.write("  ]\n")
+                file.write("}\n")
+                file.close()
 
-        # Store the longitude and latitude and category of each data point
-        if current_data_point[33][1] is not None and current_data_point[33][2] is not None and \
-                CrimeDataGenerator.in_correct_time_frame(datapoint=current_data_point, timeframe=timeframe,
-                                                         current_date=current_date):
+                file_name = "geodata_" + timeframe + '_' + str(int(num_data_points / 20000)) + ".geojson"
+                file = open(os.path.join(json_directory, file_name), 'w+')
 
-            file.write("{\n\"type\": \"Feature\",\n\"geometry\": {\n\"type: \"point\",\n\"coordinates\": [\n")
-            file.write(str(float(current_data_point[33][1])) + ",\n")
-            file.write(str(float(current_data_point[33][2])) + "    \n]\n},\n")
-            file.write("\"properties\": {\nid: " + str(num_data_points))
-            file.write(",\n\"category\": \"")
-            if mapping:  # and self.category_completetion()
-                file.write(CrimeDataGenerator.crime_simplification_map[current_data_point[16]])
-            else:
-                file.write(str(current_data_point[16]))
-            file.write("\",\n\"time\": \"")
-            file.write(CrimeDataGenerator.get_crime_time(current_data_point).__str__())
-            file.write("\"\n}\n},")
-            num_data_points += 1
-            create_new_file = True
+                file.write("{\n")
+                file.write("  \"type\": \"FeatureCollection\",\n")
+                file.write("  \"features\": [\n")
+                file.write("    {\n")
 
-            if verbose:
-                print("data point: ", num_data_points, "found at index", i)
+                create_new_file = False
+
+            current_data_point = self.data_uncleaned[i]
+            self.data[i] = current_data_point
+
+            # Store the longitude and latitude and category of each data point
+            if current_data_point[33][1] is not None and current_data_point[33][2] is not None and \
+                    CrimeDataGenerator.in_correct_time_frame(datapoint=current_data_point, timeframe=timeframe,
+                                                             current_date=current_date):
+                file.write("      \"type\": \"Feature\",\n")
+                file.write("      \"properties\": {\n")
+                file.write("        \"id\": " + str(num_data_points) + ",\n")
+                file.write("        \"time\": \"")
+                file.write(CrimeDataGenerator.get_crime_time(current_data_point).__str__() + "\",\n")
+
+                # TODO: Check to see if the         "marker-color": "#0000ff",
+                # TODO: and the         "marker-symbol": "rail-metro", are actually usefull in this situation
+
+                file.write("        \"category\": \"")
+                if mapping:  # and self.category_completetion()
+                    file.write(CrimeDataGenerator.crime_simplification_map[current_data_point[16]] + "\"\n")
+                else:
+                    file.write(str(current_data_point[16]) + "\"\n")
+
+                file.write("      },\n")
+                file.write("      \"geometry\": {\n")
+                file.write("        \"type\": \"Point\",\n")
+                file.write("        \"coordinates\": [\n")
+                file.write("          " + str(float(current_data_point[33][1])) + ",\n")
+                file.write("          " + str(float(current_data_point[33][2])) + "\n")
+                file.write("        ]\n")
+                file.write("      }\n")
+                file.write("    },\n")
+
+                num_data_points += 1
+                create_new_file = True  # prevent the index 0 from overwriting a lot of files before finding data
+
+                if verbose:
+                    print("data point: ", num_data_points, "found at index", i)
+
+        file.write("  ]\n")
+        file.write("}\n")
+        file.close()
+
 
     @staticmethod
     def get_crime_time(datapoint):
@@ -439,4 +486,6 @@ if __name__ == "__main__":
     json_url = "https://data.lacity.org/api/views/y8tr-7khq/rows.json?accessType=DOWNLOAD"
 
     crime_data_generator = CrimeDataGenerator(json_url, json_directory)
-    crime_data_generator.generate_cleaned_json_files(mapping=True, verbose=True)
+    # crime_data_generator.generate_cleaned_json_files(mapping=True, verbose=True)
+    crime_data_generator.generate_geojson(timeframe="day", mapping=True, verbose=True,
+                                         current_date=TimeString(2016, 10, 30))
