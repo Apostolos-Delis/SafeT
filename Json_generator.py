@@ -383,7 +383,6 @@ class CrimeDataGenerator:
                 file.write("{\n")
                 file.write("  \"type\": \"FeatureCollection\",\n")
                 file.write("  \"features\": [\n")
-                file.write("    {\n")
 
                 create_new_file = False
 
@@ -394,6 +393,7 @@ class CrimeDataGenerator:
             if current_data_point[33][1] is not None and current_data_point[33][2] is not None and \
                     CrimeDataGenerator.in_correct_time_frame(datapoint=current_data_point, timeframe=timeframe,
                                                              current_date=current_date):
+                file.write("    {\n")                   
                 file.write("      \"type\": \"Feature\",\n")
                 file.write("      \"properties\": {\n")
                 file.write("        \"id\": " + str(num_data_points) + ",\n")
@@ -443,14 +443,19 @@ class CrimeDataGenerator:
         return date
 
     @staticmethod
-    def in_correct_time_frame(datapoint, timeframe, current_date=datetime.datetime.now())->bool:
+    def in_correct_time_frame(datapoint: list, timeframe: str, current_date=datetime.datetime.now())->bool:
         """
         :param datapoint: datapoint you want to check if in the valid region
-        :param timeframe: whether you want to check if it is same month, day, or year
-        :return:
+        :param timeframe: whether you want to check if it is same month, day, all, or year
+        :param current_date: the current date (or whatever you want to set as the date relative to the data)
+        :return: true or false if the data-point occurred within the time-frame of the current date
         """
         time = CrimeDataGenerator.get_crime_time(datapoint)
-        if timeframe == "day":
+        
+        if timeframe == "all":
+            return True
+        
+        elif timeframe == "day":
             return time[0] == current_date.year and time[1] == current_date.month and time[2] == current_date.day
 
         elif timeframe == "week":
