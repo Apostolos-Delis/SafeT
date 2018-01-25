@@ -2,13 +2,12 @@
 //  AppDelegate.swift
 //  SafeT
 //
-//  Created by Apostolos Delis on 12/18/17.
-//  Copyright © 2017 Apostolos Delis. All rights reserved.
+//  Created by Jason Ho on 12/21/17.
+//  Copyright © 2017 Jason Ho. All rights reserved.
 //
 
 import UIKit
 import CoreData
-import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyAb4-BF3HnTYAU00rYFp-6JtkrthROK-Bs")
         return true
     }
 

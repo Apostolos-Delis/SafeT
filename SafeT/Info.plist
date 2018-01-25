@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to update the crime rate in your area</string>
-	<key>NSLocationUsageDescription</key>
-	<string>We need your location to update the crime rate in your area</string>
+	<string>We need your location to operate this app</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1Ijoic3RpdGNoeSIsImEiOiJjamJoNDg3ajkxcDc5MndvMjlydmdkcjg3In0.4xYdXJrGIbN3NRyfgPRnZA</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
