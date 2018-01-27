@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SafeT
 //
-//  Created by Jason Ho on 12/21/17.
-//  Copyright © 2017 Jason Ho. All rights reserved.
+//  Created by Jason Ho on 1/27/18.
+//  Copyright © 2018 Jason Ho. All rights reserved.
 //
 
 import UIKit

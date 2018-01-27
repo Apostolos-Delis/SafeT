@@ -7,103 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BB35C421FEC7D6200F51C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB35C411FEC7D6200F51C4C /* AppDelegate.swift */; };
-		1BB35C441FEC7D6200F51C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB35C431FEC7D6200F51C4C /* ViewController.swift */; };
-		1BB35C471FEC7D6200F51C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB35C451FEC7D6200F51C4C /* Main.storyboard */; };
-		1BB35C4A1FEC7D6200F51C4C /* SafeT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BB35C481FEC7D6200F51C4C /* SafeT.xcdatamodeld */; };
-		1BB35C4C1FEC7D6200F51C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB35C4B1FEC7D6200F51C4C /* Assets.xcassets */; };
-		1BB35C4F1FEC7D6200F51C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB35C4D1FEC7D6200F51C4C /* LaunchScreen.storyboard */; };
-		551CFFDF14D7448CCCFB9E3D /* Pods_SafeT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C54B364D89EBA842AF79521 /* Pods_SafeT.framework */; };
+		1B98FA19201D282C0009E8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B98FA18201D282C0009E8C5 /* AppDelegate.swift */; };
+		1B98FA1B201D282C0009E8C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B98FA1A201D282C0009E8C5 /* ViewController.swift */; };
+		1B98FA1E201D282C0009E8C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B98FA1C201D282C0009E8C5 /* Main.storyboard */; };
+		1B98FA21201D282C0009E8C5 /* SafeT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B98FA1F201D282C0009E8C5 /* SafeT.xcdatamodeld */; };
+		1B98FA23201D282C0009E8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B98FA22201D282C0009E8C5 /* Assets.xcassets */; };
+		1B98FA26201D282C0009E8C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B98FA24201D282C0009E8C5 /* LaunchScreen.storyboard */; };
+		1F12460AA6031D097AA9B8EC /* Pods_SafeT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728740790CDB877A1A903345 /* Pods_SafeT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1BB35C3E1FEC7D6200F51C4C /* SafeT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BB35C411FEC7D6200F51C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BB35C431FEC7D6200F51C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BB35C461FEC7D6200F51C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1BB35C491FEC7D6200F51C4C /* SafeT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SafeT.xcdatamodel; sourceTree = "<group>"; };
-		1BB35C4B1FEC7D6200F51C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1BB35C4E1FEC7D6200F51C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1BB35C501FEC7D6200F51C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		475E5B74B83748B44B2B05F4 /* Pods-SafeT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafeT/Pods-SafeT.release.xcconfig"; sourceTree = "<group>"; };
-		5C54B364D89EBA842AF79521 /* Pods_SafeT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D1DDB49841ADCCCA5D140D /* Pods-SafeT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafeT/Pods-SafeT.debug.xcconfig"; sourceTree = "<group>"; };
+		029E630B0FC5628205216926 /* Pods-SafeT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafeT/Pods-SafeT.debug.xcconfig"; sourceTree = "<group>"; };
+		1B98FA15201D282C0009E8C5 /* SafeT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B98FA18201D282C0009E8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1B98FA1A201D282C0009E8C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B98FA1D201D282C0009E8C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B98FA20201D282C0009E8C5 /* SafeT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SafeT.xcdatamodel; sourceTree = "<group>"; };
+		1B98FA22201D282C0009E8C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B98FA25201D282C0009E8C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B98FA27201D282C0009E8C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		728740790CDB877A1A903345 /* Pods_SafeT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2D6750A41E9123CDD12DCC /* Pods-SafeT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafeT/Pods-SafeT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BB35C3B1FEC7D6200F51C4C /* Frameworks */ = {
+		1B98FA12201D282C0009E8C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551CFFDF14D7448CCCFB9E3D /* Pods_SafeT.framework in Frameworks */,
+				1F12460AA6031D097AA9B8EC /* Pods_SafeT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BB35C351FEC7D6200F51C4C = {
+		1B98FA0C201D282B0009E8C5 = {
 			isa = PBXGroup;
 			children = (
-				1BB35C401FEC7D6200F51C4C /* SafeT */,
-				1BB35C3F1FEC7D6200F51C4C /* Products */,
-				4E1FE9DB9827D852D835B237 /* Pods */,
-				4753701510B5F47E3A148E6E /* Frameworks */,
+				1B98FA17201D282C0009E8C5 /* SafeT */,
+				1B98FA16201D282C0009E8C5 /* Products */,
+				6EBE6D55456C2DD83412505B /* Pods */,
+				EC2F44BD2EA690D948C322FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		1BB35C3F1FEC7D6200F51C4C /* Products */ = {
+		1B98FA16201D282C0009E8C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BB35C3E1FEC7D6200F51C4C /* SafeT.app */,
+				1B98FA15201D282C0009E8C5 /* SafeT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1BB35C401FEC7D6200F51C4C /* SafeT */ = {
+		1B98FA17201D282C0009E8C5 /* SafeT */ = {
 			isa = PBXGroup;
 			children = (
-				1BB35C411FEC7D6200F51C4C /* AppDelegate.swift */,
-				1BB35C431FEC7D6200F51C4C /* ViewController.swift */,
-				1BB35C451FEC7D6200F51C4C /* Main.storyboard */,
-				1BB35C4B1FEC7D6200F51C4C /* Assets.xcassets */,
-				1BB35C4D1FEC7D6200F51C4C /* LaunchScreen.storyboard */,
-				1BB35C501FEC7D6200F51C4C /* Info.plist */,
-				1BB35C481FEC7D6200F51C4C /* SafeT.xcdatamodeld */,
+				1B98FA18201D282C0009E8C5 /* AppDelegate.swift */,
+				1B98FA1A201D282C0009E8C5 /* ViewController.swift */,
+				1B98FA1C201D282C0009E8C5 /* Main.storyboard */,
+				1B98FA22201D282C0009E8C5 /* Assets.xcassets */,
+				1B98FA24201D282C0009E8C5 /* LaunchScreen.storyboard */,
+				1B98FA27201D282C0009E8C5 /* Info.plist */,
+				1B98FA1F201D282C0009E8C5 /* SafeT.xcdatamodeld */,
 			);
 			path = SafeT;
 			sourceTree = "<group>";
 		};
-		4753701510B5F47E3A148E6E /* Frameworks */ = {
+		6EBE6D55456C2DD83412505B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5C54B364D89EBA842AF79521 /* Pods_SafeT.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4E1FE9DB9827D852D835B237 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F3D1DDB49841ADCCCA5D140D /* Pods-SafeT.debug.xcconfig */,
-				475E5B74B83748B44B2B05F4 /* Pods-SafeT.release.xcconfig */,
+				029E630B0FC5628205216926 /* Pods-SafeT.debug.xcconfig */,
+				EB2D6750A41E9123CDD12DCC /* Pods-SafeT.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC2F44BD2EA690D948C322FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				728740790CDB877A1A903345 /* Pods_SafeT.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BB35C3D1FEC7D6200F51C4C /* SafeT */ = {
+		1B98FA14201D282C0009E8C5 /* SafeT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BB35C531FEC7D6200F51C4C /* Build configuration list for PBXNativeTarget "SafeT" */;
+			buildConfigurationList = 1B98FA2A201D282C0009E8C5 /* Build configuration list for PBXNativeTarget "SafeT" */;
 			buildPhases = (
-				20B65C6268B03A73D96A8E66 /* [CP] Check Pods Manifest.lock */,
-				1BB35C3A1FEC7D6200F51C4C /* Sources */,
-				1BB35C3B1FEC7D6200F51C4C /* Frameworks */,
-				1BB35C3C1FEC7D6200F51C4C /* Resources */,
-				D31AC32B0F8803D8B880A8F2 /* [CP] Embed Pods Frameworks */,
-				9758593A70347039E8439291 /* [CP] Copy Pods Resources */,
+				CB7B9A377D4AA4DDFB966391 /* [CP] Check Pods Manifest.lock */,
+				1B98FA11201D282C0009E8C5 /* Sources */,
+				1B98FA12201D282C0009E8C5 /* Frameworks */,
+				1B98FA13201D282C0009E8C5 /* Resources */,
+				67B13C77ACDFFE5B5C3FF1C0 /* [CP] Embed Pods Frameworks */,
+				97D01D64268089E1C858CF71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -111,26 +111,26 @@
 			);
 			name = SafeT;
 			productName = SafeT;
-			productReference = 1BB35C3E1FEC7D6200F51C4C /* SafeT.app */;
+			productReference = 1B98FA15201D282C0009E8C5 /* SafeT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1BB35C361FEC7D6200F51C4C /* Project object */ = {
+		1B98FA0D201D282B0009E8C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jason Ho";
 				TargetAttributes = {
-					1BB35C3D1FEC7D6200F51C4C = {
+					1B98FA14201D282C0009E8C5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 1BB35C391FEC7D6200F51C4C /* Build configuration list for PBXProject "SafeT" */;
+			buildConfigurationList = 1B98FA10201D282B0009E8C5 /* Build configuration list for PBXProject "SafeT" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,64 +138,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 1BB35C351FEC7D6200F51C4C;
-			productRefGroup = 1BB35C3F1FEC7D6200F51C4C /* Products */;
+			mainGroup = 1B98FA0C201D282B0009E8C5;
+			productRefGroup = 1B98FA16201D282C0009E8C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BB35C3D1FEC7D6200F51C4C /* SafeT */,
+				1B98FA14201D282C0009E8C5 /* SafeT */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1BB35C3C1FEC7D6200F51C4C /* Resources */ = {
+		1B98FA13201D282C0009E8C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB35C4F1FEC7D6200F51C4C /* LaunchScreen.storyboard in Resources */,
-				1BB35C4C1FEC7D6200F51C4C /* Assets.xcassets in Resources */,
-				1BB35C471FEC7D6200F51C4C /* Main.storyboard in Resources */,
+				1B98FA26201D282C0009E8C5 /* LaunchScreen.storyboard in Resources */,
+				1B98FA23201D282C0009E8C5 /* Assets.xcassets in Resources */,
+				1B98FA1E201D282C0009E8C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20B65C6268B03A73D96A8E66 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SafeT-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9758593A70347039E8439291 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafeT/Pods-SafeT-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D31AC32B0F8803D8B880A8F2 /* [CP] Embed Pods Frameworks */ = {
+		67B13C77ACDFFE5B5C3FF1C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,34 +206,67 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafeT/Pods-SafeT-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		97D01D64268089E1C858CF71 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafeT/Pods-SafeT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB7B9A377D4AA4DDFB966391 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1BB35C3A1FEC7D6200F51C4C /* Sources */ = {
+		1B98FA11201D282C0009E8C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB35C441FEC7D6200F51C4C /* ViewController.swift in Sources */,
-				1BB35C421FEC7D6200F51C4C /* AppDelegate.swift in Sources */,
-				1BB35C4A1FEC7D6200F51C4C /* SafeT.xcdatamodeld in Sources */,
+				1B98FA1B201D282C0009E8C5 /* ViewController.swift in Sources */,
+				1B98FA19201D282C0009E8C5 /* AppDelegate.swift in Sources */,
+				1B98FA21201D282C0009E8C5 /* SafeT.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1BB35C451FEC7D6200F51C4C /* Main.storyboard */ = {
+		1B98FA1C201D282C0009E8C5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BB35C461FEC7D6200F51C4C /* Base */,
+				1B98FA1D201D282C0009E8C5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1BB35C4D1FEC7D6200F51C4C /* LaunchScreen.storyboard */ = {
+		1B98FA24201D282C0009E8C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BB35C4E1FEC7D6200F51C4C /* Base */,
+				1B98FA25201D282C0009E8C5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1BB35C511FEC7D6200F51C4C /* Debug */ = {
+		1B98FA28201D282C0009E8C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +331,7 @@
 			};
 			name = Debug;
 		};
-		1BB35C521FEC7D6200F51C4C /* Release */ = {
+		1B98FA29201D282C0009E8C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -381,24 +381,13 @@
 			};
 			name = Release;
 		};
-		1BB35C541FEC7D6200F51C4C /* Debug */ = {
+		1B98FA2B201D282C0009E8C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3D1DDB49841ADCCCA5D140D /* Pods-SafeT.debug.xcconfig */;
+			baseConfigurationReference = 029E630B0FC5628205216926 /* Pods-SafeT.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = JW34UAT97D;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK\"",
-					"\"$(SRCROOT)/Pods\"/**",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = SafeT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonho.SafeT;
@@ -408,24 +397,13 @@
 			};
 			name = Debug;
 		};
-		1BB35C551FEC7D6200F51C4C /* Release */ = {
+		1B98FA2C201D282C0009E8C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 475E5B74B83748B44B2B05F4 /* Pods-SafeT.release.xcconfig */;
+			baseConfigurationReference = EB2D6750A41E9123CDD12DCC /* Pods-SafeT.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = JW34UAT97D;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Mapbox-iOS-SDK\"",
-					"\"$(SRCROOT)/Pods\"/**",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = SafeT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonho.SafeT;
@@ -438,20 +416,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BB35C391FEC7D6200F51C4C /* Build configuration list for PBXProject "SafeT" */ = {
+		1B98FA10201D282B0009E8C5 /* Build configuration list for PBXProject "SafeT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BB35C511FEC7D6200F51C4C /* Debug */,
-				1BB35C521FEC7D6200F51C4C /* Release */,
+				1B98FA28201D282C0009E8C5 /* Debug */,
+				1B98FA29201D282C0009E8C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BB35C531FEC7D6200F51C4C /* Build configuration list for PBXNativeTarget "SafeT" */ = {
+		1B98FA2A201D282C0009E8C5 /* Build configuration list for PBXNativeTarget "SafeT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BB35C541FEC7D6200F51C4C /* Debug */,
-				1BB35C551FEC7D6200F51C4C /* Release */,
+				1B98FA2B201D282C0009E8C5 /* Debug */,
+				1B98FA2C201D282C0009E8C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -459,17 +437,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1BB35C481FEC7D6200F51C4C /* SafeT.xcdatamodeld */ = {
+		1B98FA1F201D282C0009E8C5 /* SafeT.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1BB35C491FEC7D6200F51C4C /* SafeT.xcdatamodel */,
+				1B98FA20201D282C0009E8C5 /* SafeT.xcdatamodel */,
 			);
-			currentVersion = 1BB35C491FEC7D6200F51C4C /* SafeT.xcdatamodel */;
+			currentVersion = 1B98FA20201D282C0009E8C5 /* SafeT.xcdatamodel */;
 			path = SafeT.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 1BB35C361FEC7D6200F51C4C /* Project object */;
+	rootObject = 1B98FA0D201D282B0009E8C5 /* Project object */;
 }
